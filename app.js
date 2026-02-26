@@ -1,5 +1,7 @@
 const form = document.getElementById('task-form');
 
+ 
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const input = document.getElementById('task-input');
@@ -23,7 +25,10 @@ document.addEventListener('click', (e) => {
         const newText = prompt('Edit task:', currentText);
         if (newText) {
             li.firstChild.textContent = newText + ' ';
-        }}})
+        }}
+        updateLocalStorage();
+    
+    })
 
         function storeTasksInLocalStorage(task) {
 
@@ -43,5 +48,24 @@ document.addEventListener('click', (e) => {
             ul.appendChild(li);
         });
     }
+
+   function updateLocalStorage() {
+        const tasks = [];
+        document.querySelectorAll('#task-list li').forEach(li => {
+            tasks.push(li.firstChild.textContent.trim());
+        }); 
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+    }
+    
+    const toggleThemeButton = document.getElementById('toggle-theme-button');
+    toggleThemeButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');   
+    });
 
     loadTasksFromLocalStorage();
