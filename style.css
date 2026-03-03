@@ -51,3 +51,8 @@ body.dark-theme {
 .dark-theme #task-list li {
   background: #444;
 }
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
