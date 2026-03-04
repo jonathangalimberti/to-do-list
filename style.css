@@ -37,7 +37,6 @@ body {
   border-radius: 5px;
 }
 
-/* Dark theme styles */
 body.dark-theme {
   background-color: #333;
   color: #fff;
@@ -55,4 +54,39 @@ body.dark-theme {
 .completed {
   text-decoration: line-through;
   color: gray;
+}
+
+li {
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-button {
+  padding: 10px;
+  background-color: #fff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

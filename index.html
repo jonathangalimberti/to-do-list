@@ -1,39 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>To do list</title>
-</head>
-<body>
+  </head>
+  <body>
     <header></header>
     <main>
-        <div id="theme-toggle">
-            <button id="toggle-theme-button">Toggle Theme</button>
-        </div>
-        <div id="task-manager">
-            <h1>To do list</h1>
-            <form action="" id="task-form">
-                <input type="text" id="task-input" placeholder="Enter a task">
-                <button type="submit">Add Task</button>
-                <section>
-                    <button id="clear-completed-button">Clear Completed</button>
-                    <button id="clear-all-button">Clear All</button>
-                    filter:
-                    <select id="filter-tasks">
-                        <option value="all">All</option>
-                        <option value="completed">Completed</option>
-                        <option value="pending">Pending</option>
-                    </select>
-                </section>
-                <ul id="task-list">
-                    
-                </ul>
-            </form>
-        </div>
+      <div id="theme-toggle">
+        <button id="toggle-theme-button">Toggle Theme</button>
+      </div>
+      <div id="task-manager">
+        <h1>To do list</h1>
+        <form action="" id="task-form">
+          <section class="container">
+            <input type="text" id="task-input" placeholder="Enter a task" />
+            <button type="submit" class="submit-button">Add Task</button>
+          </section>
+          <section class="container">
+            <div>
+              <button id="clear-completed-button">Clear Completed</button>
+              <button id="clear-all-button">Clear All</button>
+            </div>
+            <div>
+              <span>Filter tasks:</span>
+              <select id="filter-tasks" class="filter-button">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+              </select>
+            </div>
+          </section>
+          <ul id="task-list"></ul>
+        </form>
+      </div>
     </main>
     <footer></footer>
-</body>
-<script src="app.js"></script>
+  </body>
+  <script src="app.js"></script>
 </html>

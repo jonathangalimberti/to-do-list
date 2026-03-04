@@ -33,7 +33,7 @@ form.addEventListener("submit", (e) => {
   if (value) {
     const ul = document.getElementById("task-list");
     const li = document.createElement("li");
-    li.innerHTML = `<span class="task-index">${ul.children.length + 1}.</span> <span class="task-text">${value}</span> <span class="completed-btn">✔️</span> <span class="edit-btn">✏️</span> <span class="delete-btn">🗑️</span>`;
+    li.innerHTML = `<div class=""><span class="task-index">${ul.children.length + 1}.</span> <span class="task-text">${value}</span> </div> <div> <span class="completed-btn">✔️</span> <span class="edit-btn">✏️</span> <span class="delete-btn">🗑️</span> </div>`;
 
     ul.appendChild(li);
     input.value = "";
@@ -81,7 +81,7 @@ function loadTasksFromLocalStorage() {
     console.log("Task index:", task.index);
     if (task.completed === true) li.classList.add("completed");
     else li.classList.remove("completed");
-    li.innerHTML = `<span class="task-index">${task.index}.</span> <span class="task-text">${task.task}</span> <span class="completed-btn">✔️</span> <span class="edit-btn">✏️</span> <span class="delete-btn">🗑️</span>`;
+    li.innerHTML = `<div> <span class="task-index">${task.index}.</span> <span class="task-text">${task.task}</span> </div> <div> <span class="completed-btn">✔️</span> <span class="edit-btn">✏️</span> <span class="delete-btn">🗑️</span> </div>`;
     ul.appendChild(li);
   });
   // after inserting tasks ensure indexes are correct
