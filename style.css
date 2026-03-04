@@ -96,14 +96,21 @@ li {
   cursor: pointer;
 }
 
+@media screen and (min-width: 200px) and (max-width: 325px) {
+  #task-input {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 325px) and (max-width: 375px) {
+  #task-input {
+    width: 49%;
+  }
+}
+
 @media screen and (min-width: 500px) {
   #task-input {
     width: 70%;
   }
 }
 
-@media screen and (max-width: 375px) {
-  #task-input {
-    width: 49%;
-  }
-}
