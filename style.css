@@ -21,11 +21,9 @@ body {
 #task-input {
   padding: 10px;
   width: 55%;
-  /* margin-right: 10px; */
 }
 
 #task-list {
-   
   list-style-type: none;
   padding: 0;
 }
@@ -65,16 +63,16 @@ li {
 
 .container {
   display: flex;
-    gap: 25px;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 10px;
+  gap: 25px;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
 }
 
 .button {
   margin: 5px;
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
@@ -98,9 +96,14 @@ li {
   cursor: pointer;
 }
 
-@media screen and (min-width:500px) {
+@media screen and (min-width: 500px) {
   #task-input {
     width: 70%;
   }
 }
 
+@media screen and (max-width: 375px) {
+  #task-input {
+    width: 49%;
+  }
+}
